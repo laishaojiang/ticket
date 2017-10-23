@@ -1,0 +1,54 @@
+/* pages/submit/submit.wxss */
+.submit{
+	margin-top: 30rpx;
+	background-color: #ffffff;
+	padding-left: 30rpx;
+	padding-top: 30rpx;
+	padding-bottom: 50rpx;
+}
+i{
+	font-size: 28rpx;
+	color: #638BB2;
+	margin-top: 10rpx;
+}
+i image{
+	margin-top: 0rpx;
+	margin-right: 12rpx;
+	width: 26rpx;
+	height: 28rpx;
+}
+.submit_top{
+	padding-bottom: 30rpx;
+	padding-right: 30rpx;
+	border-bottom: 2rpx solid #E5E5E5;
+}
+.submit_top view span{
+	font-size: 34rpx;
+}
+.submit_top view span image{
+	width: 50rpx;
+	height: 50rpx;
+	margin-bottom: -10rpx;
+	margin-right: 20rpx;
+}
+.submit_down{
+	margin-top: 50rpx;
+}
+.submit_down view:not(:last-child){
+	margin-bottom: 36rpx;
+}
+.submit_down view span{
+	float: left;
+	width: 120rpx;
+	font-size: 30rpx;
+	color: #828282;
+}
+.submit_down view text{
+	float: right;
+	width: 536rpx;
+	font-size: 30rpx;
+	color: #828282;
+}
+.scan{
+	background:#FF9C1F;
+}

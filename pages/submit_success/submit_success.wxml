@@ -1,0 +1,10 @@
+<!--pages/submit_success/submit_success.wxml-->
+<view>
+	<view class="submit_success_title">
+		<image src="../../image/icon_success.png"></image>
+		<span>提交成功</span>
+	</view>
+	<text class="submit_success_tip">您的开票请求已提交给商户，请前往柜台向开票员说明开票金额</text>
+
+	<button bindtap="goList" type="">返回首页</button>
+</view>

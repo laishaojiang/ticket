@@ -1,0 +1,14 @@
+/* pages/amend/amend.wxss */
+/* pages/amend/amend.wxss */
+.close-icon{
+    float: right;
+    width: 30rpx;
+    height: 30rpx; 
+    margin-top: 30rpx;
+}
+.abolishBtn{
+	margin-top: 30rpx;
+	border: 2rpx solid #638BB2;
+	background-color: #fff;
+	color: #638AB1;
+}

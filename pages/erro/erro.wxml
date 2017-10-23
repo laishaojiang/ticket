@@ -1,0 +1,7 @@
+<!--pages/erro/erro.wxml-->
+<view class="erro_view">
+	<image src="../../image/icon_systerm.png"></image>
+	<text>系统维护中...</text>
+	<span>系统正在维护升级中，请稍后再使用</span>
+</view>
+

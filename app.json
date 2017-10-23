@@ -1,0 +1,21 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/index/index",
+    "pages/index_lis/index_lis",
+    
+    "pages/amend/amend",
+    "pages/submit_success/submit_success",
+    
+    "pages/details/details",
+    "pages/submit/submit",
+    "pages/erro/erro",
+    "pages/search/search"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#6491FF",
+    "navigationBarTitleText": "潮生活发票助手",
+    "navigationBarTextStyle": "#FFF"
+  }
+}

@@ -1,0 +1,162 @@
+/* pages/search/search.wxss */
+/* pages/search/search.wxss */
+.search{
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	background-color: #6491FF;
+	padding: 25rpx 16rpx;
+}
+.searchInput{
+	float: left;
+	width: 533rpx;
+	height: 56rpx;
+	font-size: 26rpx;
+	font-family:'microsoft YaHei';
+}
+.searchInput_pla{
+	font-family:'microsoft YaHei';
+	font-size:26rpx;
+}
+.search view{
+	float: left;
+	width: 634rpx;
+	justify-content: flex-start;
+	align-items: center;
+	background-color: #fff;
+	border-radius: 100rpx;
+	padding-left: 16rpx;
+	padding-right: 20rpx;
+	margin-right: 18rpx;
+	box-sizing: border-box;
+}
+.search image:first-child{
+	float: left;
+	width: 25rpx;
+	height: 25rpx;
+	margin-right: 10rpx;
+	margin-top: 15rpx;
+}
+.close-icon{
+	float: right;
+	width: 30rpx;
+	height: 30rpx; 
+	margin-top: 10rpx;
+}
+.search text{
+	font-size: 32rpx;
+	color: #fff;
+}
+.searchUl{
+	padding-left: 66rpx;
+	background-color: #fff;
+}
+.searchUl view{
+	padding: 25rpx 0;
+	padding-right: 37.4rpx;
+	font-size: 28rpx;
+	color: #666;
+}
+.searchUl view:not(:last-child){
+	border-bottom: 2rpx solid #eee;
+}
+.searchUl view image{
+	float: right;
+	width: 25.6rpx;
+	height: 18.4rpx;
+	margin-top: 8rpx;
+}
+.searchResult{
+	margin-top: 30rpx;
+}
+.searchResult_Ul{
+	background-color: #fff;
+	padding-left: 30rpx;
+}
+.searchResult_Ul view{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 20rpx 0;
+	padding-right: 41rpx;
+}
+.searchResult_Ul view:not(:last-child){
+	border-bottom: 2rpx solid #E5E5E5;
+}
+
+.searchResult_Ul view text{
+	font-size: 34rpx;
+}
+.searchResult_Ul view span,.searchResult_Ul view box{
+	display: flex;
+	align-items: center;
+	width: 499rpx;
+	font-size: 34rpx;
+}
+.searchResult_Ul view box{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.searchResult_Ul view box image{
+	width: 32rpx;
+	height: 32rpx;
+}
+.tip{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 30rpx;
+	font-size: 28rpx;
+	color: #888888;
+}
+button{
+	width: 690rpx;
+	height: 88rpx;
+	line-height: 88rpx;
+	margin-top: 60rpx;
+	background-color: #6491FF;
+	font-size: 36rpx;
+	color: #fff;
+}
+.searchNo{
+	display: flex;
+	margin-top: 154rpx;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.searchNo image{
+	width: 353rpx;
+	height: 258rpx;
+}
+.searchNo text{
+	margin-top: 43rpx;
+	font-size: 40rpx;
+}
+.searchNo span{
+	margin-top: 16rpx;
+	font-size: 28rpx;
+	color: #888888;
+}
+.No{
+	color: #E64340;
+}
+.gfdz input{
+	width: 499rpx;
+}
+.close-icon{
+    float: right;
+    width: 30rpx;
+    height: 30rpx; 
+    margin-top: 30rpx;
+}
+.search-close-icon{
+	margin-top: 14rpx !important;
+}
+.indexDown_input span{
+	width: 470rpx;
+	overflow: hidden; /*自动隐藏文字*/
+   	text-overflow: ellipsis;/*文字隐藏后添加省略号*/
+    white-space: nowrap;/*强制不换行*/
+}

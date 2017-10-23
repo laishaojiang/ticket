@@ -1,0 +1,26 @@
+/* pages/index/index.wxss */
+page{
+	padding-bottom: 160rpx;
+}
+.close-icon{
+    float: right;
+    width: 30rpx;
+    height: 30rpx; 
+    margin-top: 30rpx;
+}
+.to_lead_info{
+	position: absolute;
+	bottom: 60rpx;
+	width: 100%;
+	text-align: center;
+}
+.to_lead_info span{
+	font-size: 31rpx;
+	color: #4573E2;
+}
+.textarea{
+	float: left;
+	width: 314rpx;
+	height: 88rpx;
+	line-height: 88rpx;
+}

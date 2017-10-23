@@ -1,0 +1,26 @@
+/* pages/submit_success/submit_success.wxss */
+.submit_success_title{
+	text-align: center;
+	margin-top: 87rpx;
+}
+.submit_success_title image{
+	width: 181rpx;
+	height: 169rpx;
+	position: relative;
+	left: 16rpx;
+}
+.submit_success_title span{
+	display: block;
+	margin-top: 35rpx;
+	margin-bottom: 30rpx;
+	font-size: 40rpx;
+	color: #000;
+}
+.submit_success_tip{
+	display:block;
+	width: 616rpx;
+	margin: 0 auto;
+	text-align: center;
+	font-size: 28rpx;
+	color: #888888;
+}

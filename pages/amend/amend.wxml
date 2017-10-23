@@ -1,0 +1,259 @@
+<!--pages/amend/amend.wxml-->
+<!--index.wxml-->
+<!--pages/index/index.wxml-->
+<!--index.wxml-->
+<view class="erroTip" wx:if="{{error}}">
+  <span>{{erroInfo}}</span>
+</view>
+
+
+<view class="indexDown">
+
+  <view class="indexDown_two" wx:if="{{tkType == 1}}">
+    <view class="indexDown_inputs clearfix">
+      <view class="ttt">
+        <view class="indexDown_input clearfix">
+          <view class="clearfix boB">
+            <text>单位名称</text>
+
+            <input focus="{{on_compname}}" bindinput="input_compname" placeholder="单位/企业全称" placeholder-style="font-family: 'microsoft YaHei';font-size: 30rpx;color:#b2b2b2;" value="{{compname}}" bindfocus="focus_compname" bindblur="blur_compname" />
+
+            <view class="close" bindtap="clear_compname" wx:if="{{clear_compname}}" data-text="{{gfmcInput_value}}">
+              <image class="close-icon" src="../../image/icon_delete2.png"></image>
+            </view>
+          </view>
+
+        </view>
+        <view class="searchUl" wx:if="{{searchList}}">
+          <view wx:for="{{companyList}}" bindtap="companyConfirm" data-name="{{item.gfmc}}" data-phone="{{item.gfdh}}" data-tax="{{item.gfsh}}" data-addr="{{item.gfdz}}" data-bank="{{item.khyh}}" data-acc="{{item.gfyhzh}}">
+            <text>{{item.gfmc}}</text>
+            <!-- <image src="../../image/icon_radioClick2.png" wx:if="{{radioClick2_show}}"></image> -->
+          </view>
+        </view>
+        <view class="indexDown_input clearfix">
+          <view class="clearfix boB">
+            <text>税号</text>
+
+            <box>
+              <input focus="{{on_tax}}" bindinput="input_tax" bindfocus="focus_tax" bindblur="blur_tax" class="{{error_tax?'No':''}}" value="{{tax}}" placeholder="纳税识别号" placeholder-style="font-family: 'microsoft YaHei';font-size: 30rpx;color:#b2b2b2;" />
+              <image wx:if="{{error_tax}}" src="../../image/icon_notice.png"></image>
+            </box>
+
+            <view bindtap="search" class="searchSh">查询</view>
+
+            <view class="close" bindtap="clear_tax" wx:if="{{clear_tax}}" data-text="{{gfshInput_value}}">
+              <image class="close-icon" src="../../image/icon_delete2.png"></image>
+            </view>
+          </view>
+
+        </view>
+        <view class="indexDown_input clearfix">
+          <view class="clearfix">
+            <text>单位电话</text>
+
+            <box>
+              <input focus="{{on_tel}}" bindinput="input_tel" bindfocus="focus_tel" bindblur="blur_tel" class="{{error_tel?'No':''}}" value="{{tel}}" placeholder="请输入你的联系方式" placeholder-style="font-family: 'microsoft YaHei';font-size: 30rpx;color:#b2b2b2;" />
+              <image wx:if="{{error_tel}}" src="../../image/icon_notice.png"></image>
+            </box>
+
+            <view class="close" bindtap="clear_tel" wx:if="{{clear_tel}}" data-text="{{gfdhInput_value}}">
+              <image class="close-icon" src="../../image/icon_delete2.png"></image>
+            </view>
+          </view>
+
+        </view>
+      </view>
+
+    </view>
+    <view class="tip">
+      <span>查询数据仅供参考，请核对后提交</span>
+    </view>
+    <button class="" bindtap="update" disabled="{{disabled_gene}}">确认修改</button>
+    <button class="abolishBtn" bindtap="cancel">取消修改</button>
+
+  </view>
+
+
+  <view class="indexDown_one" wx:if="{{tkType == 2}}">
+    <view class="indexDown_inputs clearfix">
+      <view class="ttt">
+
+        <view class="indexDown_input clearfix">
+          <view class="clearfix boB">
+            <text>单位名称</text>
+
+
+            <input focus="{{on_compname}}" bindinput="input_compname" placeholder="单位/企业全称" placeholder-style="font-family: 'microsoft YaHei';font-size: 30rpx;color:#b2b2b2;" value="{{compname}}" bindfocus="focus_compname" bindblur="blur_compname" />
+
+
+            <view class="close" bindtap="clear_compname" wx:if="{{clear_compname}}" data-text="{{gfmcInput_value}}">
+              <image class="close-icon" src="../../image/icon_delete2.png"></image>
+            </view>
+
+          </view>
+
+        </view>
+        <view class="searchUl" wx:if="{{searchList}}">
+          <view wx:for="{{companyList}}" bindtap="companyConfirm" data-name="{{item.gfmc}}" data-phone="{{item.gfdh}}" data-tax="{{item.gfsh}}" data-addr="{{item.gfdz}}" data-bank="{{item.khyh}}" data-acc="{{item.gfyhzh}}">
+            <text>{{item.gfmc}}</text>
+            <!-- <image src="../../image/icon_radioClick2.png" wx:if="{{radioClick2_show}}"></image> -->
+          </view>
+        </view>
+        <view class="indexDown_input clearfix">
+          <view class="clearfix boB">
+            <text>税号</text>
+
+
+            <box>
+              <input focus="{{on_tax}}" bindinput="input_tax" bindfocus="focus_tax" bindblur="blur_tax" class="{{error_tax?'No':''}}" value="{{tax}}" placeholder="纳税识别号" placeholder-style="font-family: 'microsoft YaHei';font-size: 30rpx;color:#b2b2b2;" />
+              <image wx:if="{{error_tax}}" src="../../image/icon_notice.png"></image>
+            </box>
+
+            <view bindtap="search" class="searchSh">查询</view>
+
+            <view class="close" bindtap="clear_tax" wx:if="{{clear_tax}}" data-text="{{gfshInput_value}}">
+              <image class="close-icon" src="../../image/icon_delete2.png"></image>
+            </view>
+          </view>
+
+        </view>
+        <view class="indexDown_input clearfix">
+          <view class="clearfix boB">
+            <text>单位地址</text>
+
+
+            <box>
+              <input focus="{{on_addr}}" bindinput="input_addr" bindfocus="focus_addr" bindblur="blur_addr" class="{{error_addr?'No':''}}" value="{{addr}}" placeholder="须与营业执照地址一" placeholder-style="font-family: 'microsoft YaHei';font-size: 30rpx;color:#b2b2b2;" />
+              <image wx:if="{{error_addr}}" src="../../image/icon_notice.png"></image>
+            </box>
+
+            <view class="close" bindtap="clear_addr" wx:if="{{clear_addr}}" data-text="{{gfdhInput_value}}">
+              <image class="close-icon" src="../../image/icon_delete2.png"></image>
+            </view>
+          </view>
+
+        </view>
+        <view class="indexDown_input clearfix">
+          <view class="clearfix boB">
+            <text>单位电话</text>
+
+
+            <box>
+              <input focus="{{on_tel}}" bindinput="input_tel" bindfocus="focus_tel" bindblur="blur_tel" class="{{error_tel?'No':''}}" value="{{tel}}" placeholder="单位电话" placeholder-style="font-family: 'microsoft YaHei';font-size: 30rpx;color:#b2b2b2;" />
+              <image wx:if="{{error_tel}}" src="../../image/icon_notice.png"></image>
+            </box>
+
+            <view class="close" bindtap="clear_tel" wx:if="{{clear_tel}}" data-text="{{gfdhInput_value}}">
+              <image class="close-icon" src="../../image/icon_delete2.png"></image>
+            </view>
+          </view>
+
+        </view>
+        <view class="indexDown_input clearfix">
+          <view class="clearfix boB">
+            <text>开户银行</text>
+
+            <box>
+              <input focus="{{on_bank}}" bindinput="input_bank" bindfocus="focus_bank" bindblur="blur_bank" class="{{error_bank?'No':''}}" value="{{bank}}" placeholder="单位资料中的开户银行" placeholder-style="font-family: 'microsoft YaHei';font-size: 30rpx;color:#b2b2b2;" />
+              <image wx:if="{{error_bank}}" src="../../image/icon_notice.png"></image>
+            </box>
+
+            <view class="close" bindtap="clear_bank" wx:if="{{clear_bank}}" data-text="{{gfdhInput_value}}">
+              <image class="close-icon" src="../../image/icon_delete2.png"></image>
+            </view>
+          </view>
+
+        </view>
+        <view class="indexDown_input clearfix">
+          <view class="clearfix">
+            <text>银行账号</text>
+
+
+            <box>
+              <input focus="{{on_acc}}" bindinput="input_acc" bindfocus="focus_acc" bindblur="blur_acc" class="{{error_acc?'No':''}}" value="{{acc}}" placeholder="单位资料中的银行账号" placeholder-style="font-family: 'microsoft YaHei';font-size: 30rpx;color:#b2b2b2;" />
+              <image wx:if="{{error_acc}}" src="../../image/icon_notice.png"></image>
+            </box>
+
+            <view class="close" bindtap="clear_acc" wx:if="{{clear_acc}}" data-text="{{gfdhInput_value}}">
+              <image class="close-icon" src="../../image/icon_delete2.png"></image>
+            </view>
+          </view>
+
+        </view>
+      </view>
+
+
+
+    </view>
+    <view class="tip">
+      <span>查询数据仅供参考，请核对后提交</span>
+    </view>
+
+    <button class="" bindtap="update" disabled="{{disabled_spe}}">确认修改</button>
+    <button class="abolishBtn" bindtap="cancel">取消修改</button>
+
+  </view>
+
+
+  <view class="indexDown_three" wx:if="{{tkType == 3}}">
+    <view class="indexDown_inputs clearfix">
+      <view>
+        <view class="indexDown_input  clearfix">
+          <view class="clearfix boB">
+            <text>姓名</text>
+
+            <box>
+              <input focus="{{on_name}}" bindinput="input_name" bindfocus="focus_name" bindblur="blur_name" class="{{error_name?'No':''}}" value="{{name}}" placeholder="请输入您的真实姓名" placeholder-style="font-family: 'microsoft YaHei';font-size: 30rpx;color:#b2b2b2;" />
+              <image wx:if="{{error_name}}" src="../../image/icon_notice.png"></image>
+            </box>
+
+            <view class="close" bindtap="clear_name" wx:if="{{clear_name}}" data-text="{{gfshInput_value}}">
+              <image class="close-icon" src="../../image/icon_delete2.png"></image>
+            </view>
+          </view>
+
+        </view>
+        <view class="indexDown_input clearfix">
+          <view class="clearfix boB">
+            <text>电话号码</text>
+
+            <box>
+              <input focus="{{on_mobile}}" bindinput="input_mobile" bindfocus="focus_mobile" bindblur="blur_mobile" class="{{error_mobile?'No':''}}" value="{{mobile}}" placeholder="请输入你的联系方式" placeholder-style="font-family: 'microsoft YaHei';font-size: 30rpx;color:#b2b2b2;"
+              />
+              <image wx:if="{{error_mobile}}" src="../../image/icon_notice.png"></image>
+            </box>
+
+            <view class="close" bindtap="clear_mobile" wx:if="{{clear_mobile}}" data-text="{{gfdhInput_value}}">
+              <image class="close-icon" src="../../image/icon_delete2.png"></image>
+            </view>
+          </view>
+
+        </view>
+        <view class="indexDown_input clearfix">
+          <view class="clearfix">
+            <text>身份证号</text>
+
+            <box>
+              <input focus="{{on_IDNo}}" bindinput="input_IDNo" bindfocus="focus_IDNo" bindblur="blur_IDNo" class="{{error_IDNo?'No':''}}" value="{{IDNo}}" placeholder="请输入18位身份证号码" placeholder-style="font-family: 'microsoft YaHei';font-size: 30rpx;color:#b2b2b2;"
+              />
+              <image wx:if="{{error_IDNo}}" src="../../image/icon_notice.png"></image>
+            </box>
+
+            <view class="close" bindtap="clear_IDNo" wx:if="{{clear_IDNo}}" data-text="{{gfdhInput_value}}">
+              <image class="close-icon" src="../../image/icon_delete2.png"></image>
+            </view>
+          </view>
+
+        </view>
+      </view>
+
+    </view>
+
+
+
+    <button class="" bindtap="update" disabled="{{disabled_per}}">确认修改</button>
+    <button class="abolishBtn" bindtap="cancel">取消修改</button>
+  </view>
+
+
+</view>

@@ -1,0 +1,149 @@
+<!--pages/details/details.wxml-->
+<!--单位普票-->
+<view class="details" wx:if="{{tkType == 1}}">
+  <view class="detalisTop">
+    <view>
+      <text>{{appletUserInvoice.gfmc}}</text>
+      <span>税号:{{appletUserInvoice.gfsh}}</span>
+    </view>
+    <view>
+      <span>单位电话:{{appletUserInvoice.gfdh == null ? "" : appletUserInvoice.gfdh}}</span>
+      <i bindtap="compile">
+        <image src="../../image/icon_edit.png"></image>
+        <text>编辑</text>
+      </i>
+    </view>
+    <i class="semicircle semicircle-left"></i>
+    <i class="semicircle semicircle-right"></i>
+    <view>
+      <image src="../../image/icon_shareTips.png"></image>
+      <text>点击右上角可将抬头分享给同事</text>
+    </view>
+
+  </view>
+
+  <view class="detalisMiddle">
+    <view class="detalisMiddle_top">
+      <view>
+        <text>开发票</text>
+        <span>出示该页面给相关工作人员扫码获取发票</span>
+      </view>
+      <view>
+        <image src="../../image/icon_break.png"></image>
+        <text bindtap="refreshCode">刷新二维码</text>
+      </view>
+    </view>
+    <view class="detalisMiddle_down detalisMiddle_down_one">
+      <image src="{{qr_code}}"></image>
+      <view>
+        <text>单位普票</text>
+      </view>
+    </view>
+  </view>
+</view>
+<!--单位专票-->
+<view class="details" wx:if="{{tkType == 2}}">
+  <view class="detalisTop">
+    <view>
+      <text>{{appletUserInvoice.gfmc}}</text>
+      <span>税号:{{appletUserInvoice.gfsh}}</span>
+    </view>
+    <view>
+      <span>单位电话:{{appletUserInvoice.gfdh}}</span>
+      <i bindtap="compile">
+        <image src="../../image/icon_edit.png"></image>
+        <text>编辑</text>
+      </i>
+    </view>
+    <i class="semicircle semicircle-left"></i>
+    <i class="semicircle semicircle-right"></i>
+    <view>
+      <image src="../../image/icon_shareTips.png"></image>
+      <text>点击右上角可将抬头分享给同事</text>
+    </view>
+
+  </view>
+
+  <view class="detalisMiddle dashed">
+    <view class="detalisMiddle_top">
+      <view>
+        <text>开发票</text>
+        <span>出示该页面给相关工作人员扫码获取发票</span>
+      </view>
+      <view>
+        <image src="../../image/icon_break.png"></image>
+        <text bindtap="refreshCode">刷新二维码</text>
+      </view>
+    </view>
+    <view class="detalisMiddle_down detalisMiddle_down_two">
+      <image src="{{qr_code}}"></image>
+      <view>
+        <text>单位专票</text>
+      </view>
+    </view>
+    <i class="semicircle semicircle-left"></i>
+    <i class="semicircle semicircle-right"></i>
+  </view>
+
+  <view class="detalisDown">
+    <view>
+      <text>单位地址</text>
+      <span>{{appletUserInvoice.gfdz}}</span>
+    </view>
+    <view>
+      <span>开户银行: {{appletUserInvoice.khyh}}</span>
+      <span>银行账户: {{appletUserInvoice.gfyhzh}}</span>
+    </view>
+  </view>
+</view>
+<!-- 个人 -->
+<!--pages/details/details.wxml-->
+<view class="details" wx:if="{{tkType == 3}}">
+  <view class="detalisTop">
+    <view>
+      <text>{{appletUserInvoice.gfmc}}</text>
+      <span>电话号码:{{appletUserInvoice.gfdh == null ? "" : appletUserInvoice.gfdh}}</span>
+    </view>
+    <view>
+      <span>身份证号:{{appletUserInvoice.gfsh == null ? "" : appletUserInvoice.gfsh}}</span>
+      <i bindtap="compile">
+        <image src="../../image/icon_edit.png"></image>
+        <text>编辑</text>
+      </i>
+    </view>
+    <i class="semicircle semicircle-left"></i>
+    <i class="semicircle semicircle-right"></i>
+    <view>
+      <image src="../../image/icon_shareTips.png"></image>
+      <text>点击右上角可将抬头分享给同事</text>
+    </view>
+
+  </view>
+
+  <view class="detalisMiddle">
+    <view class="detalisMiddle_top">
+      <view>
+        <text>开发票</text>
+        <span>出示该页面给相关工作人员扫码获取发票</span>
+      </view>
+      <view>
+        <image src="../../image/icon_break.png"></image>
+        <text bindtap="refreshCode">刷新二维码</text>
+      </view>
+    </view>
+    <view class="detalisMiddle_down detalisMiddle_down_three">
+      <image src="{{qr_code}}"></image>
+      <view>
+        <text>个人发票</text>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="goList">
+  <image bindtap="goList" src="../../image/icon_list.png"></image>
+</view>
+
+<view class="recommend">
+  <span>Copyright © 深圳市多易得信息技术股份有限公司</span>
+</view>

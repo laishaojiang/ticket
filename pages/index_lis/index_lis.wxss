@@ -1,0 +1,147 @@
+/* pages/index_lis/index_lis.wxss */
+/* pages/index_lis/index_lis.wxss */
+page{
+	padding-top: 75rpx;
+	position: relative;
+	padding-bottom: 110rpx;
+}
+.index_lisTop{
+	width: 100%;
+	position: fixed;
+	top: 0rpx;
+	z-index: 5;
+	display: flex;
+	justify-content: center;
+	background-color: #fff;
+	padding: 20rpx 0;
+	font-size: 34rpx;
+	color: #2F6BFF;
+}
+.index_lisTop view{
+	display: flex;
+	align-items: center;
+}
+.index_lisTop image{
+	width: 36rpx;
+	height: 36rpx;
+	margin-right: 18rpx;
+	margin-bottom: -3rpx;
+}
+.index_lisDown{
+	margin-top: 20rpx;
+	padding: 0 30rpx;
+}
+.index_lisDown>view{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.index_lisDown_lis{
+	width: 690rpx;
+	height: 145rpx;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #fff;
+	margin-top: 20rpx;
+	padding-left: 25rpx;
+	border-radius: 8rpx;
+	box-sizing:border-box;
+	box-shadow: 0rpx 4rpx 16rpx #D9D9D9;
+	z-index: 2;
+}
+.index_lisDown_lis image{
+	width: 80rpx;
+	height: 80rpx;
+}
+.index_lisDown_lis>view{
+	display: flex;
+	flex-direction: row;
+}
+.index_lisDown_lis>view view{
+	display: flex;
+	flex-direction: column;
+	margin-left: 25rpx;
+}
+.index_lisDown_lis>view view text{
+	font-size: 34rpx;
+}
+.index_lisDown_lis>view view span{
+	font-size: 28rpx;
+	color: #999999;
+}
+.goBtn{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 120rpx;
+	height: 145rpx;
+	padding-right: 25rpx;
+}
+.goBtn span{
+	display: inline-block;
+	width: 120rpx;
+	height: 60rpx;
+	line-height: 60rpx;
+	border-radius: 8rpx;
+	font-size: 26rpx;
+	text-align: center;
+	background-color: #6491FF;
+	color: #fff;
+}
+.moreLi{
+	display: flex;
+	justify-content: center;
+	width: 660rpx;
+	padding: 15rpx 40rpx;
+	background-color: #FCFDFF;
+	border-bottom-right-radius: 8rpx;
+	border-bottom-left-radius: 8rpx; 
+	box-sizing:border-box;
+	box-shadow: 0rpx 4rpx 8rpx #D9D9D9;
+}
+.moreLi view{
+	float: left;
+	height: 40rpx;
+	line-height: 40rpx;
+}
+.moreLi image{
+	margin-right: 12rpx;
+	margin-bottom: -2rpx;
+}
+.moreLi text{
+	font-size: 28rpx;
+	color: #638BB2;
+}
+.padR{
+	padding-right: 71rpx;
+}
+.padLR{
+	padding-left: 71rpx;
+	padding-right: 71rpx;
+}
+.padL{
+	padding-left: 71rpx;
+}
+.topNo{
+	color: #BEBEBE !important;
+}
+.name{
+	width: 350rpx;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+}
+
+/* 推荐商户 */
+.recommend{
+	padding-top: 20rpx;
+	width: 100%;
+	position: fixed;
+	bottom: 0rpx;
+	z-index: 10;
+	background-color: #F5F5F5;
+    /* bottom: -105rpx; */
+}

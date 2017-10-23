@@ -1,0 +1,49 @@
+<!--pages/index_lis/index_lis.wxml-->
+<!--pages/index_lis/index_lis.wxml-->
+<view class="index_lisTop">
+	<navigator url="../index/index">
+		<image src="../../image/icon_add.png"></image>
+		<text>新增开票信息</text>
+	</navigator>
+</view>
+
+<scroll-view scroll-y="true" bindscrolltolower="lower" lower-threshold scroll-y style="height: 980rpx;">
+	<view class="index_lisDown">
+		<view wx:for="{{appAppletUserInvoiceList}}" >
+			<view class="index_lisDown_lis" bindtap="showMenu"  data-index="{{index}}"  data-id="{{item.uiId}}">
+				<view>
+					<view><image src="{{fpzlImgUrl[item.fpzl]}}"></image></view>
+					<view>
+						<text>{{fpzlType[item.fpzl]}}</text>
+						<span class="name">{{item.fpzl==3?'姓名:'+item.gfmc:item.gfmc}}</span>
+					</view>
+				</view>
+				
+				<view class="goBtn" catchtap="toSubmit" data-id="{{item.uiId}}" data-types="{{item.fpzl}}"><span>去开票</span></view>
+				
+			</view>
+			<view class="moreLi clearfix" hidden="{{!item.showMenu}}">
+				<view class="boR padR" catchtap="edit" data-id="{{item.uiId}}" data-types="{{item.fpzl}}">
+					<image style="width: 26rpx;height: 28rpx" src="../../image/icon_edit.png"></image>
+					<text >编辑</text>
+				</view>
+				<view class="boR padLR">
+					<image style="width: 28rpx;height: 28rpx" src="../../image/icon_delete.png"></image>
+					<text catchtap="delete_tk" data-id="{{item.uiId}}">删除</text>
+				</view>
+				<view class="padL" catchtap="{{index == 0?'':'stick'}}" data-id="{{item.uiId}}">
+					<image style="width: 28rpx;height: 28rpx" src="../../image/{{index == 0?'icon_topGray':'icon_top'}}.png"></image>
+					<text class="{{index == 0?'topNo':''}}">置顶</text>
+				</view>
+			</view>
+		</view>
+	</view>
+</scroll-view>
+
+
+
+
+
+<view class="recommend">
+	<span>Copyright © 深圳市多易得信息技术股份有限公司</span>
+</view>

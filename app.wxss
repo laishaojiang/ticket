@@ -1,0 +1,287 @@
+/**app.wxss**/
+/**app.wxss**/
+page{
+	background-color: #F5F5F5;
+	font-family: 'microsoft YaHei';
+}
+.boL{
+	border-left:2rpx solid #E5E5E5;
+}
+.boR{
+	border-right:2rpx solid #E5E5E5;
+}
+.boB{
+	border-bottom:2rpx solid #E5E5E5;
+}
+.mt537{
+    margin-top: 537rpx;
+}
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+    clear: both;
+}
+.clearfix {
+    zoom: 1;
+}
+.close-icon{
+    float: right;
+    width: 30rpx;
+    height: 30rpx; 
+    margin-top: 10rpx;
+}
+input{
+    font-family: 'Microsoft YaHei';
+}
+::-webkit-input-placeholder { /* WebKit browsers */
+color: #B2B2B2;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+color: #B2B2B2;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+color: #B2B2B2;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+color: #B2B2B2;
+} 
+/* index_one index_two index_three */
+.indexTop_title{
+    display: flex;
+    justify-content: center;
+    font-size: 26rpx;
+    color: #888888;
+    padding: 20rpx 0;
+    border-bottom: 2rpx solid #E5E5E5;
+}
+.indexTop{
+    margin-top: 30rpx;
+    background-color: #fff;
+}
+.indexTop>view:last-child{
+    display: flex;
+    flex-direction: row;
+    padding: 14rpx 0;
+}
+.indexTop>view:last-child view{
+    display: flex;
+    flex: 1;
+    height: 86rpx;
+    font-size: 30rpx;
+    color: #4A4A4A;
+    align-items: center;
+    justify-content: center;
+}
+.indexTop>view:last-child view icon{
+    margin-right: 12rpx;
+}
+.indexDown{
+    margin-top: 30rpx;
+}
+.indexDown_input{
+    position: relative;
+    padding-left: 30rpx;
+    
+    background-color: #fff;
+}
+.active{
+    color:#2F6BFF;
+}
+
+.indexDown_input text:not(.hiddenText){
+    float: left;
+    width: 136rpx;
+    margin-right: 44rpx;
+    font-size: 30rpx;
+    height: 88rpx;
+    line-height: 88rpx;
+}
+.indexDown_input input{
+    float: left;
+    width: 314rpx;
+    height: 88rpx;
+    font-size: 30rpx;
+}
+.indexDown_input span{
+    float: left;
+    height: 88rpx;
+    line-height: 88rpx;
+    font-size: 30rpx;
+}
+.cheakInput input{
+    width: 445rpx;
+}
+.searchUl{
+    position: absolute;/* ÃŽÂªÃŠÂ²ÃƒÂ´ÃƒÂ»Â³Ã¶Â´Ã­Â£Â¬Ã“ÃÂµÃ£Ã†Ã¦Â¹Ã– */
+    left: 0rpx;
+    top: 90rpx;
+    width: 100%;
+    padding-left: 30rpx;
+    box-sizing: border-box;
+    background-color: #F5F8FF;
+    z-index: 999;
+    opacity: 0.96 ;
+}
+.searchUl view{
+    display: flex;
+    align-items: center;
+    padding: 30rpx 0;
+    padding-left: 33rpx;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 37.4rpx;
+    font-size: 28rpx;
+    color: #666;
+}
+.searchUl view:not(:last-child){
+    border-bottom: 2rpx solid #eee;
+}
+.searchUl view image{
+    width: 25.6rpx;
+    height: 18.4rpx;
+    margin-top: 8rpx;
+}
+button{
+    width: 690rpx;
+    height: 88rpx;
+    margin-top: 60rpx;
+    background-color: #6491FF;
+    font-size: 32rpx;
+    color: #fff;
+}
+button:disabled{
+    color: rgba(255,255,255,0.4);
+}
+.searchSh{
+    float: left;
+    margin-top: 25rpx;
+    margin-left: 15rpx;
+    width: 76rpx;
+    height: 40rpx;
+    line-height: 40rpx;
+    text-align: center;
+    font-size: 26rpx;
+    border-radius: 5rpx;
+    background-color: #6491FF;
+    color: #ffffff;
+}
+
+
+.icon{
+    width: 32rpx;
+    height: 32rpx;
+    margin-right: 12rpx;
+}
+.errorInfo{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+.errorInfo view{
+    display: flex;
+    justify-content: center;
+    padding: 14rpx 0;
+    font-size: 30rpx;
+    color: #fff;
+    background-color: #FF4D4A;
+}
+.notice{
+    width: 32rpx;
+    height: 32rpx;
+    margin-top: 29rpx;
+}
+.ttt{
+    position: relative;
+}
+.indexDown_input view box{
+    width: 499rpx;
+    font-size: 30rpx;
+}
+.indexDown_input view box image{
+    float: right;
+    width: 32rpx;
+    height: 32rpx;
+    margin-top: 29.5rpx;
+    margin-right: 30rpx;
+}
+.No{/* ±¨´í */
+    color: #E64340;
+}
+/* ÍÆ¼ö¸øÉÌ»§ */
+.recommend{
+    width: 100%;
+   /*  position: absolute; */
+}
+.recommend text{
+    display: block;
+    width: 130rpx;
+    margin: 0 auto;
+    margin-bottom: 8rpx;
+    font-size: 26rpx;
+    color: #3F66C6;
+}
+.recommend span{
+    display: block;
+    width: 450rpx;
+    margin: 0 auto;
+    margin-bottom: 18rpx;
+    font-size: 20rpx;
+    color: #9F9F9F;
+}
+.erroTip{
+    width: 100%;
+    background-color: #FF4D49;
+    padding: 14rpx 0;
+    text-align: center;
+    font-size: 30rpx;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10
+}
+
+.tip{
+    padding-left: 30rpx;
+    font-size: 26rpx;
+    color: #888888;
+    margin-top: 30rpx;
+}
+.close{
+    float: left;
+    padding: 0 20rpx;
+    height: 88rpx;
+    text-align: center;
+}
+
+.hiddenInput{
+    opacity: 0;
+}
+.hiddenText{
+    position: absolute;
+    left: 210rpx;
+    top: 0rpx;
+    float: left;
+    width: 400rpx;
+    height: 88rpx;
+    line-height: 88rpx;
+    font-size: 34rpx;
+}
+.goList{
+    position: fixed;
+    right: 35rpx;
+    top: 840rpx;
+}
+.goList image{
+    width: 118rpx;
+    height: 118rpx;
+}
+.fL{
+    float: left;
+}
+.fR{
+    float: right;
+}

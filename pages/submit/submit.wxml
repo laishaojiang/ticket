@@ -1,0 +1,61 @@
+<!--pages/submit/submit.wxml-->
+<view class="submit">
+	<view class="submit_top clearfix">
+		<view class="fL">
+			<span><image src="../../image/{{tkType==1?'icon_submit_common.png':tkType==2?'icon_submit_special.png':'icon_submit_person.png'}}" alt=""></image>{{tkType==1?"单位普票":tkType==2?"单位专票":"个人发票"}}</span>
+		</view>
+		<i class="fR" bindtap="compile"><image src="../../image/icon_edit.png"></image><text>编辑</text></i>
+	</view>
+	<view class="submit_down ">
+		<view wx:if="{{tkType != 3}}" class="clearfix">
+			<span>单位名称</span>
+			<text>{{appletUserInvoice.gfmc}}</text>
+		</view>
+		<view wx:if="{{tkType != 3}}" class="clearfix">
+			<span>税   号</span>
+			<text>{{appletUserInvoice.gfsh}}</text>
+		</view>
+		<view wx:if="{{tkType == 2}}" class="clearfix">
+			<span>单位地址</span>
+			<text>{{appletUserInvoice.gfdz}}</text>
+		</view>
+		<view wx:if="{{tkType == 3}}" class="clearfix">
+			<span>姓      名</span>
+			<text>{{appletUserInvoice.gfmc}}</text>
+		</view>
+		<view wx:if="{{tkType == 3}}" class="clearfix">
+			<span>电话号码</span>
+			<text>{{appletUserInvoice.gfdh}}</text>
+		</view>
+		<view wx:if="{{tkType == 3}}" class="clearfix">
+			<span>身份证号</span>
+			<text>{{appletUserInvoice.gfsh}}</text>
+		</view>
+		<view wx:if="{{tkType != 3}}" class="clearfix">
+			<span>单位电话</span>
+			<text>{{appletUserInvoice.gfdh}}</text>
+		</view>
+		<view wx:if="{{tkType== 2}}" class="clearfix">
+			<span>开户银行</span>
+			<text>{{appletUserInvoice.khyh}}</text>
+		</view>
+		<view wx:if="{{tkType == 2}}" class="clearfix">
+			<span>银行账户</span>
+			<text>{{appletUserInvoice.gfyhzh}}</text>
+		</view>
+	</view>
+	
+</view>
+
+
+<view class="tip">
+	<span>{{noCode? "点击“确认并保存”可将开票信息发送给商家" : "点击“扫码开票”扫商户的台卡二维码"}}</span>
+</view>
+
+<button class="scan" wx:if="{{noCode}}" bindtap="scan">扫码开票</button>
+
+<button wx:else bindtap="submit">确认</button>
+
+<view class="goList">
+  <image bindtap="goList" src="../../image/icon_list.png"></image>
+</view>

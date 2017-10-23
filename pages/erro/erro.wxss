@@ -1,0 +1,20 @@
+/* pages/erro/erro.wxss */
+/* pages/erro/erro.wxss */
+.erro_view{
+	margin-top: 140rpx;
+	text-align: center;
+}
+.erro_view image{
+	width: 223rpx;
+	height: 257rpx;
+}
+.erro_view text{
+	display: block;
+	margin-top: 50rpx;
+	margin-bottom: 18rpx;
+	font-size: 40rpx;
+}
+.erro_view span{
+	font-size: 28rpx;
+	color: #888888;
+}
