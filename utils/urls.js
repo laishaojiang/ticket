@@ -1,7 +1,5 @@
-// const HOST = 'https://fapiao.wbgj.cn/applet/';
-// var WS = 'wss://fapiao.wbgj.cn/applet/';
-const HOST = 'https://tla.wbgj.cn/applet/';
-var WS = 'wss://tla.wbgj.cn/applet/';
+const HOST = 'HOST';//
+var WS = 'WS';
 var urls = {
   REST_userInfo: HOST + 'aide/user/decrypt',//用户信息
 
